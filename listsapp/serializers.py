@@ -5,7 +5,7 @@ from .models import List, Item
 class ItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = Item
-        fields = ['id','name','due_date','is_complete', 'list_id']
+        fields = ['id', 'name','due_date','is_complete', 'list_id']
 
 class ListSerializer(serializers.ModelSerializer):
     items = ItemSerializer(many=True)
